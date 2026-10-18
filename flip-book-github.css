@@ -142,3 +142,13 @@
     .github-flip-book .cover_checkbox:checked ~ .flip_book .front_cover { transition-duration: 1.5s !important; }
     .github-flip-book .page { transition-duration: 0.5s !important; }
 }
+.github-flip-book .front_cover::after{
+    position:absolute;
+    inset:0;
+    z-index:2;
+    border-radius:inherit;
+    background:url("./assets/images/flip_book_edge_shading.webp") center / 100% 100% no-repeat;
+    content:"";
+    pointer-events:none;
+}
+.github-flip-book .front_cover .cover_label{z-index:3}

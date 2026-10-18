@@ -23,10 +23,12 @@ document.addEventListener('keydown', (event) => {
 
 const brandGallery = document.querySelector('.brand-gallery');
 const galleryScenes = brandGallery?.querySelectorAll('[data-gallery-scene]');
+const galleryPin = brandGallery?.querySelector('.brand-gallery__pin');
+const galleryVisuals = brandGallery?.querySelector('.brand-gallery__visuals');
 const galleryTheme = brandGallery?.querySelector('[data-gallery-theme]');
 const galleryNumber = brandGallery?.querySelector('[data-gallery-number]');
 
-if (brandGallery && galleryScenes?.length && galleryTheme && galleryNumber) {
+if (brandGallery && galleryScenes?.length && galleryPin && galleryVisuals && galleryTheme && galleryNumber) {
   const galleryThemes = ['RADIANCE', 'RESTORE', 'RENEW'];
   let galleryFrame = 0;
   let currentThemeIndex = -1;
@@ -38,19 +40,14 @@ if (brandGallery && galleryScenes?.length && galleryTheme && galleryNumber) {
     const progress = Math.min(1, Math.max(0, -sectionTop / Math.max(1, scrollRange)));
     const scenePosition = progress * (galleryScenes.length - 1);
     const nextThemeIndex = Math.min(galleryScenes.length - 1, Math.round(scenePosition));
+    const galleryTravel = galleryPin.clientHeight * (galleryScenes.length - 1);
+
+    galleryVisuals.style.transform = `translate3d(0, ${-progress * galleryTravel}px, 0)`;
 
     galleryScenes.forEach((scene, index) => {
-      const distance = index - scenePosition;
-      scene.style.opacity = String(Math.max(0, 1 - Math.abs(distance)));
-      scene.style.transform = `translate3d(0, ${distance * 12}svh, 0)`;
       scene.setAttribute('aria-hidden', String(index !== nextThemeIndex));
       scene.classList.toggle('is-active', index === nextThemeIndex);
     });
-
-    const copyShift = scenePosition <= 1
-      ? -12.5 * scenePosition
-      : -12.5 - 2.5 * (scenePosition - 1);
-    brandGallery.style.setProperty('--gallery-copy-shift', `${copyShift}svh`);
 
     if (nextThemeIndex !== currentThemeIndex) {
       currentThemeIndex = nextThemeIndex;
