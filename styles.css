@@ -90,3 +90,65 @@
 .brand-gallery__scene[data-gallery-scene="0"]{top:0}
 .brand-gallery__scene[data-gallery-scene="1"]{top:100svh}
 .brand-gallery__scene[data-gallery-scene="2"]{top:200svh}
+.studio-faq{padding:clamp(88px,11vw,144px) 0;color:#302b20;background:#f7f5ef;font-family:Arial,sans-serif}
+.studio-faq__inner{display:grid;width:min(88%,1000px);grid-template-columns:1fr;gap:0}
+.studio-faq__intro{text-align:center}
+.studio-faq .studio-section-kicker{margin-bottom:18px;color:#9b7928;font-size:10px;letter-spacing:.2em}
+.studio-faq__intro h2{margin:0;font:400 clamp(46px,6.5vw,76px)/1 Georgia,'Times New Roman',serif;letter-spacing:-.055em}
+.studio-faq__intro>p:last-child{max-width:420px;margin:16px auto 0;color:#777061;font-size:15px;line-height:1.6}
+.studio-faq__list{width:min(100%,800px);margin:50px auto 0;border-top:1px solid rgba(117,88,28,.28)}
+.studio-faq__list details{border-bottom:1px solid rgba(117,88,28,.28)}
+.studio-faq__list summary{min-height:72px;padding:20px 2px;color:#302b20;font:400 clamp(16px,1.6vw,19px)/1.35 Arial,sans-serif}
+.studio-faq__list summary span{display:grid;width:27px;height:27px;place-items:center;border:1px solid rgba(155,121,40,.38);border-radius:50%;color:#9b7928;font:300 18px/1 Arial,sans-serif;transition:transform .25s ease,background .25s ease,color .25s ease}
+.studio-faq__list details[open] summary span{color:#fff;background:#9b7928;transform:rotate(45deg)}
+.studio-faq__list details>p{max-width:660px;margin:0 46px 23px 2px;color:#777061;font-size:14px;line-height:1.75}
+.studio-contact{padding:clamp(82px,10vw,128px) 0 36px;color:#f7f4ec;background:#272318;font-family:Arial,sans-serif}
+.studio-contact__inner{display:grid;width:min(88%,1120px);align-items:center;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(48px,9vw,120px);padding-bottom:clamp(56px,7vw,88px)}
+.studio-contact__intro{color:#f7f4ec}
+.studio-contact__intro .studio-section-kicker{margin-bottom:20px;color:#d2b76f;font-size:10px;letter-spacing:.2em}
+.studio-contact__intro h2{margin:0;color:#f7f4ec;font:400 clamp(48px,6vw,76px)/.98 Georgia,'Times New Roman',serif;letter-spacing:-.055em}
+.studio-contact__intro>p:not(.studio-section-kicker){max-width:350px;margin:22px 0 0;color:rgba(247,244,236,.68);font-size:15px;line-height:1.7}
+.studio-contact__channels{display:grid;gap:17px;margin-top:36px}
+.studio-contact__channels a{display:grid;width:max-content;gap:6px;color:#f7f4ec;font-size:14px;line-height:1.35;transition:color .2s ease}
+.studio-contact__channels a:hover{color:#d2b76f}
+.studio-contact__channels a span{color:#c6a04a;font-size:9px;letter-spacing:.18em}
+.studio-contact__form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 28px}
+.studio-contact__form label{gap:8px}
+.studio-contact__form label>span{color:#d2b76f;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+.studio-contact__form input,.studio-contact__form select,.studio-contact__form textarea{padding:11px 0;border-bottom-color:rgba(230,208,151,.32);color:#f7f4ec;font:15px/1.5 Arial,sans-serif}
+.studio-contact__form input::placeholder,.studio-contact__form textarea::placeholder{color:rgba(247,244,236,.42)}
+.studio-contact__form select{color:rgba(247,244,236,.72)}
+.studio-contact__form input:focus,.studio-contact__form select:focus,.studio-contact__form textarea:focus{border-color:#d2b76f;box-shadow:0 1px #d2b76f}
+.studio-contact__submit-row{align-items:center;gap:22px;margin-top:4px}
+.studio-contact__submit-row button{min-height:48px;gap:18px;padding:0 17px;border-color:#c6a04a;color:#272318;background:#c6a04a;font-size:10px;letter-spacing:.13em;transition:color .2s ease,background .2s ease}
+.studio-contact__submit-row button:hover{color:#f7f4ec;background:transparent}
+.studio-contact__submit-row button span{font-size:16px}
+.studio-contact__submit-row p{max-width:190px;color:rgba(247,244,236,.5);font-size:11px;line-height:1.55}
+@media(max-width:700px){.studio-faq{padding:76px 0}.studio-faq__inner{width:min(88%,560px)}.studio-faq__list{margin-top:36px}.studio-faq__list summary{min-height:66px;padding:17px 2px}.studio-contact{padding:76px 0 28px}.studio-contact__inner{width:min(88%,560px);grid-template-columns:1fr;gap:42px;padding-bottom:58px}.studio-contact__intro h2{font-size:clamp(48px,11vw,68px)}.studio-contact__channels{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:28px}.studio-contact__form{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 18px}.studio-contact__submit-row{align-items:flex-start}}
+@media(max-width:520px){.studio-faq__intro h2{font-size:clamp(43px,11vw,58px)}.studio-faq__intro>p:last-child{max-width:320px;font-size:14px}.studio-faq__list{margin-top:30px}.studio-faq__list summary{gap:14px;font-size:15px}.studio-faq__list summary span{width:24px;height:24px;flex:0 0 24px}.studio-faq__list details>p{margin-right:35px;font-size:13px}.studio-contact__channels{grid-template-columns:1fr}.studio-contact__form{grid-template-columns:1fr;gap:20px}.studio-contact__form label:nth-child(n+3){grid-column:auto}.studio-contact__submit-row{flex-direction:column;align-items:flex-start;gap:12px}.studio-contact__submit-row p{max-width:none}}
+.studio-faq{padding:clamp(72px,10vw,128px) clamp(20px,2.35vw,36px);background:#fff}
+.studio-faq__inner{position:relative;isolation:isolate;overflow:hidden;width:min(100%,1302px);min-height:496px;grid-template-columns:minmax(0,.98fr) minmax(0,1.02fr);align-items:center;gap:clamp(36px,5vw,68px);padding:clamp(28px,3.5vw,48px);border:1px solid #e2e4e9;border-radius:32px;background:linear-gradient(135deg,#f4f5f7,#f9fafb 72%,#f2f3f5)}
+.studio-faq__inner:after{position:absolute;z-index:-1;bottom:-.12em;left:28px;color:rgba(63,72,84,.045);content:'FAQ';font:600 clamp(150px,19vw,250px)/.8 Arial,sans-serif;letter-spacing:-.1em;pointer-events:none}
+.studio-faq__intro{position:relative;z-index:1;align-self:stretch;padding-top:2px;text-align:left}
+.studio-faq__intro h2{font:500 clamp(27px,3vw,34px)/1.15 Poppins,Arial,sans-serif;letter-spacing:-.045em;color:#3f4652}
+.studio-faq__intro>p:last-child{max-width:440px;margin:12px 0 0;color:#596170;font-size:15px;line-height:1.55}
+.studio-faq__contacts{display:grid;gap:12px;margin-top:48px}
+.studio-faq__contact{display:flex;width:max-content;max-width:100%;align-items:center;gap:12px;color:#202630;font-size:14px;transition:color .2s ease}
+.studio-faq__contact:hover{color:#98732c}
+.studio-faq__contact-icon{display:grid;width:40px;height:40px;flex:0 0 40px;place-items:center;border:1px solid #dedfe3;border-radius:50%;color:#5f6672;background:linear-gradient(145deg,#f9fafb,#e8eaee);box-shadow:inset 0 0 0 5px rgba(255,255,255,.55)}
+.studio-faq__contact-icon svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8}
+.studio-faq__contact:first-child .studio-faq__contact-icon{color:#98732c;border-color:rgba(198,160,74,.34)}
+.studio-faq__list{position:relative;z-index:1;align-self:center;width:100%;margin:0;border:0}
+.studio-faq__list details{overflow:hidden;border:1px solid #e1e4e9;border-radius:17px;background:#fff;box-shadow:0 5px 14px rgba(36,43,54,.035);transition:border-color .2s ease,box-shadow .2s ease}
+.studio-faq__list details+details{margin-top:20px}
+.studio-faq__list details[open]{border-color:rgba(198,160,74,.38);box-shadow:0 7px 18px rgba(36,43,54,.055)}
+.studio-faq__list summary{display:flex;min-height:66px;align-items:center;gap:16px;padding:16px 22px;color:#303744;font:500 14px/1.4 Arial,sans-serif;list-style:none}
+.studio-faq__list summary .studio-faq__number{display:block;flex:0 0 24px;color:#818895;font:400 18px/1 Arial,sans-serif;letter-spacing:-.04em}
+.studio-faq__list details[open] summary .studio-faq__number{color:#98732c}
+.studio-faq__list summary .studio-faq__question{flex:1}
+.studio-faq__list summary .studio-faq__chevron{position:relative;display:block;width:16px;height:16px;flex:0 0 16px;border:0;border-right:1.5px solid #89919e;border-bottom:1.5px solid #89919e;border-radius:0;background:transparent;transform:translateY(-3px) rotate(45deg);transition:transform .2s ease,border-color .2s ease}
+.studio-faq__list details[open] summary .studio-faq__chevron{border-color:#98732c;transform:translateY(3px) rotate(225deg)}
+.studio-faq__list details>p{max-width:none;margin:0;padding:0 22px 20px;color:#626a77;font-size:13px;line-height:1.55}
+.studio-faq__contact:focus-visible,.studio-faq__list summary:focus-visible{outline:2px solid #c6a04a;outline-offset:4px}
+@media(max-width:760px){.studio-faq{padding:64px 18px}.studio-faq__inner{min-height:0;grid-template-columns:1fr;gap:34px;padding:30px 22px;border-radius:24px}.studio-faq__inner:after{right:8px;bottom:45%;left:auto;font-size:160px}.studio-faq__contacts{gap:10px;margin-top:24px}.studio-faq__list{margin:0}.studio-faq__list details+details{margin-top:12px}.studio-faq__list summary{min-height:62px;padding:14px 16px;gap:12px}.studio-faq__list details>p{padding:0 16px 18px}}
+@media(max-width:420px){.studio-faq__inner{padding:26px 16px}.studio-faq__intro h2{font-size:26px}.studio-faq__intro>p:last-child{font-size:14px}.studio-faq__contact{font-size:12px}.studio-faq__contact-icon{width:36px;height:36px;flex-basis:36px}.studio-faq__list summary{gap:9px;font-size:13px}.studio-faq__list summary .studio-faq__number{flex-basis:22px;font-size:16px}.studio-faq__list summary .studio-faq__chevron{width:13px;height:13px;flex-basis:13px}}

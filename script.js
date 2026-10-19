@@ -139,5 +139,5 @@ contactForm?.addEventListener('submit', (event) => {
     'Message:',
     fields.get('message') || ''
   ].join('\n');
-  window.location.href = `mailto:sales@loiseau.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = `mailto:info@schonheittspa.co.ke?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
