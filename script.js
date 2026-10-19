@@ -17,6 +17,12 @@ menuPanel.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', () => setMenuOpen(false));
 });
 
+document.querySelectorAll('.atelier__book-guide-dismiss').forEach((button) => {
+  button.addEventListener('click', () => {
+    button.closest('.atelier__book-guide')?.classList.add('is-dismissed');
+  });
+});
+
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') setMenuOpen(false);
 });
